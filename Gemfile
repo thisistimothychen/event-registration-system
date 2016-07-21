@@ -51,3 +51,7 @@ gem 'devise'
 # Bootstrap it up
 gem 'bootstrap-sass'
 gem 'autoprefixer-rails'
+
+# Bootstrap 3 Datepicker
+gem 'momentjs-rails', '>= 2.9.0'
+gem 'bootstrap3-datetimepicker-rails', '~> 4.14.30'

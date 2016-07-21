@@ -4,8 +4,8 @@ one:
   name: MyString
   location: MyString
   description: MyText
-  start_date: 2016-07-20
-  end_date: 2016-07-20
+  start_datetime: 2016-07-20
+  end_datetime: 2016-07-20
   start_time: 2016-07-20 20:46:05
   end_time: 2016-07-20 20:46:05
 
@@ -13,7 +13,7 @@ two:
   name: MyString
   location: MyString
   description: MyText
-  start_date: 2016-07-20
-  end_date: 2016-07-20
+  start_datetime: 2016-07-20
+  end_datetime: 2016-07-20
   start_time: 2016-07-20 20:46:05
   end_time: 2016-07-20 20:46:05

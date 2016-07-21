@@ -11,44 +11,34 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="input-group">
     <%= f.label :name %>
-    <%= f.text_field :name %>
+    <%= f.text_field :name, class: 'form form-group form-control' %>
   </div>
 
-  <div class="field">
+  <div class="input-group">
     <%= f.label :location %>
-    <%= f.text_field :location %>
+    <%= f.text_field :location, class: 'form form-group form-control' %>
   </div>
 
-  <div class="field">
+  <div class="input-group">
     <%= f.label :description %>
-    <%= f.text_area :description %>
+    <%= f.text_area :description, class: 'form form-group form-control' %>
   </div>
 
-  <div class="field">
-    <%= f.label :start_date %>
-    <%= f.date_select :start_date %>
+  <div class="input-group date">
+    <%= f.label :start_datetime %>
+    <%= f.datetime_select :start_datetime, class: 'form form-group form-control' %>
   </div>
 
-  <div class="field">
-    <%= f.label :end_date %>
-    <%= f.date_select :end_date %>
+  <div class="input-group date">
+    <%= f.label :end_datetime %>
+    <%= f.datetime_select :end_datetime, class: 'form form-group form-control' %> <!-- f.datetime_select -->
   </div>
 
-  <div class="field">
-    <%= f.label :start_time %>
-    <%= f.time_select :start_time %>
-  </div>
-
-  <div class="field">
-    <%= f.label :end_time %>
-    <%= f.time_select :end_time %>
-  </div>
-
-  <div class="field">
+  <div class="input-group">
     <%= f.label :registration_limit %>
-    <%= f.text_field :registration_limit %>
+    <%= f.text_field :registration_limit, class: 'form form-group form-control' %>
   </div>
 
   <div class="actions">

@@ -17,22 +17,22 @@
 
 <p>
   <strong>Start date:</strong>
-  <%= @event.start_date %>
+  <%= @event.start_datetime.strftime("%b %d, %Y") %>
 </p>
 
 <p>
   <strong>End date:</strong>
-  <%= @event.end_date %>
+  <%= @event.end_datetime.strftime("%b %d, %Y") %>
 </p>
 
 <p>
   <strong>Start time:</strong>
-  <%= @event.start_time %>
+  <%= @event.start_datetime.strftime("%H:%M %p") %>
 </p>
 
 <p>
   <strong>End time:</strong>
-  <%= @event.end_time %>
+  <%= @event.end_datetime.strftime("%H:%M %p") %>
 </p>
 
 <p>
