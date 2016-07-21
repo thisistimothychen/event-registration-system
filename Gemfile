@@ -47,3 +47,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # Authentication
 gem 'devise'
+
+# Bootstrap it up
+gem 'bootstrap-sass'
+gem 'autoprefixer-rails'
