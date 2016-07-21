@@ -11,6 +11,7 @@
 - Start Time
 - End Time
 - Description
+- Registration Limit
 
 ### Users
 (look into using UMD's CAS system API)
