@@ -9,6 +9,38 @@
   </head>
 
   <body>
-    <%= yield %>
+
+    <div id="wrapper">
+      <%#= render "shared/navbar" %>
+        <div id="page-wrapper">
+            <div class="container-fluid">
+
+              <% if current_user %>
+                <%= link_to "Logout", destroy_user_session_path, method: :delete %>
+              <% else %>
+                <%= link_to "Login", new_user_session_path %>
+              <% end %>
+
+              <section class="row">
+                <div class="col-lg-12">
+                  <% flash.each do |key, value| %>
+                    <br />
+                    <div class="alert alert-info alert-dismissable"><%= value %></div>
+                  <% end %>
+                </div>
+              </section>
+
+              <section class="row">
+                  <div class="col-lg-12" id="main_content">
+                      <%= yield %>
+                  </div>
+              </section><!-- /.row -->
+
+              <div class="row"><br /><br /></div><!-- /.row -->
+
+            </div><!-- /.container-fluid -->
+        </div><!-- /#page-wrapper -->
+    </div><!-- /#wrapper -->
+
   </body>
 </html>
