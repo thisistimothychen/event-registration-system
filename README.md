@@ -1,5 +1,5 @@
 # Event Registration System 1.0
-###### Generic enterprise event registration system with Google Calendar integration
+###### Generic event registration system with Google Calendar integration
 
 
 ## Database Options
@@ -14,7 +14,6 @@
 - Registration Limit
 
 ### Users
-(look into using UMD's CAS system API)
 - First Name
 - Last Name
 - Email Address
@@ -22,5 +21,13 @@
 - User Privileges
 
 
-## Future Features
+## Upcoming Features
+### General
 - Repeating events
+- Image uploads to event pages
+- API Authentication integration (e.g. UMD's CAS system API)
+
+### Enterprise
+- Event price
+- Event speakers/performers
+- Advanced search form for events
