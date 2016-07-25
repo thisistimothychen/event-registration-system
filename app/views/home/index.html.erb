@@ -1,2 +1,10 @@
 <h1>Event Registration System</h1>
 <p>Created by Timothy Chen</p>
+
+<br />
+
+<% if current_user %>
+  <h2>My Profile</h2>
+  <%= current_user.first_name %> <%= current_user.last_name %><br />
+  <%= current_user.email %>
+<% end %>
