@@ -44,7 +44,13 @@
 <!-- Calendar Test Below -->
 
 <div id="events">
-  <%= calendar do |date| %>
+  <h2 id="month">
+    <%= link_to "<", date: @current_date.prev_month %>
+    <%= @current_date.strftime("%B %Y") %>
+    <%= link_to ">", date: @current_date.next_month %>
+  </h2>
+  <h3 style="text-align: center;"><%= link_to "Today", date: Date.today %></h3>
+  <%= calendar @current_date do |date| %>
     <%= date.day %>
     <% if @events_by_date[date.to_datetime] %>
       <ul>
