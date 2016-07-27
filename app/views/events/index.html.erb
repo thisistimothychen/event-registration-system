@@ -62,7 +62,11 @@
     <% if @events_by_date[date.to_datetime] %>
       <div class='event-clickable'>
         <% @events_by_date[date].each do |event| %>
-          <li><%= link_to event.name, event %></li>
+          <% if event.end_datetime.to_date < Date.today %>
+            <li class="past-event"><%= link_to event.name, event %></li>
+          <% else %>
+            <li class="future-event"><%= link_to event.name, event %></li>
+          <% end %>
         <% end %>
       </div>
     <% end %>
