@@ -1,4 +1,4 @@
-<h1>Events</h1>
+<h1>All Events</h1>
 
 <table class="table table-striped">
   <thead>
@@ -27,9 +27,9 @@
         <td><%= event.start_datetime.strftime("%H:%M") %></td>
         <td><%= event.end_datetime.strftime("%H:%M") %></td>
         <td><%= event.registration_limit %></td>
-        <td><%= event.user.email %></td>
+        <td><%= @users.find(event.user_id).email %></td>
         <td><%= link_to 'Show', event, class: "btn btn-default btn-sm" %></td>
-        <% if event.user == current_user %>
+        <% if @users.find(event.user_id) == current_user %>
           <td><%= link_to 'Edit', edit_event_path(event), class: "btn btn-default btn-sm" %></td>
           <td><%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-sm btn-danger" %></td>
         <% else %>
