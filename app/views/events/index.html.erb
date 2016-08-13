@@ -44,31 +44,3 @@
 <br>
 
 <%= link_to 'New Event', new_event_path, class: "btn btn-default" %>
-
-
-<br />
-
-<!-- Calendar Test Below -->
-
-<div id="events">
-  <h2 id="month">
-    <%= link_to "<", date: @current_date.prev_month %>
-    <%= @current_date.strftime("%B %Y") %>
-    <%= link_to ">", date: @current_date.next_month %>
-  </h2>
-  <h3 style="text-align: center;"><%= link_to "Today", date: Date.today %></h3>
-  <%= calendar @current_date do |date| %>
-    <%= date.day %>
-    <% if @events_by_date[date.to_datetime] %>
-      <div class='event-clickable'>
-        <% @events_by_date[date].each do |event| %>
-          <% if event.end_datetime.to_date < Date.today %>
-            <li class="past-event"><%= link_to event.name, event %></li>
-          <% else %>
-            <li class="future-event"><%= link_to event.name, event %></li>
-          <% end %>
-        <% end %>
-      </div>
-    <% end %>
-  <% end %>
-</div>

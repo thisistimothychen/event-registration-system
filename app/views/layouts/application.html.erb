@@ -17,7 +17,8 @@
 
               <ul class="nav navbar-nav">
                 <li><%= link_to "Home", home_index_path %></li>
-                <li><%= link_to "Events", events_path %></li>
+                <li><%= link_to "Calendar", calendar_path %></li>
+                <li><%= link_to "Events Listing", events_path %></li>
                 <% if current_user %>
                   <li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
                 <% else %>
